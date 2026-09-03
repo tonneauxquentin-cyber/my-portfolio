@@ -1,0 +1,17 @@
+.nav-bar {
+    @apply flex flex-row md:justify-end;
+
+    .nav-hamburger {
+        @apply visible md:invisible;
+    }
+    .nav-menu {
+        @apply invisible flex flex-row gap-6 md:visible;
+        li {
+            @apply py-2 px-4;
+        }
+        li:hover {
+            @apply bg-blue-500 text-blue-50 rounded-full;
+        }
+        
+    }
+}

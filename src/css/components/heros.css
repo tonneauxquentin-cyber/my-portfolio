@@ -1,0 +1,21 @@
+.hero {
+    @apply flex flex-col-reverse items-center gap-8 md:flex-row md:justify-between;
+    .hero-text-container {
+        @apply flex flex-col justify-center text-center md:text-left gap-4 md:w-5/10;
+        .hero-title {
+            @apply text-3xl font-bold md:text-5xl;
+        }
+        .hero-paragraphe {
+            @apply text-justify md:text-2xl;
+        }
+        .hero-btn-container {
+            @apply  flex flex-col items-center gap-4 md:flex-row;
+            .hero-btn-legend {
+                @apply text-gray-400;
+            }
+        }
+    }
+    .hero-figure {
+        @apply w-full md:w-4/10;
+    }
+}

@@ -1,0 +1,19 @@
+@layer base {
+    body {
+        @apply flex flex-col justify-between;
+    }
+    header {
+        @apply flex flex-row justify-between p-8 text-blue-500 bg-blue-100 border-b-2 border-b-blue-900;
+        .header-title {
+            @apply text-2xl;
+        }
+    }
+    main {
+        @apply flex;
+    }
+    footer {
+        @apply container mx-auto flex gap-4 text-gray-400 justify-start text-xs;
+    }
+}
+
+
