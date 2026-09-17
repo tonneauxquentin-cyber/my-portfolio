@@ -1,19 +1,29 @@
+@theme {
+    --color-portfolio-dark: #0C1B33;
+    --color-portfolio-section: #13294A;
+    --color-portfolio-blue: #2563EB;
+    --color-portfolio-light: #DBEAFE;
+}
 @layer base {
     body {
-        @apply flex flex-col justify-between;
+        @apply flex flex-col justify-between bg-portfolio-dark;
     }
     header {
-        @apply flex flex-row justify-between p-8 text-blue-500 bg-blue-100 border-b-2 border-b-blue-900;
+        @apply sticky top-0 z-50 flex flex-row justify-between items-center p-4 text-blue-50 border-b border-blue-200/60 bg-portfolio-dark/90 backdrop-blur-md;
         .header-title {
             @apply text-2xl;
+            span {
+                @apply text-blue-500;
+            }
         }
     }
     main {
-        @apply flex;
+        @apply flex flex-col;
     }
     footer {
         @apply container mx-auto flex gap-4 text-gray-400 justify-start text-xs;
     }
 }
+
 
 

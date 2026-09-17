@@ -1,0 +1,19 @@
+.about-cards {
+    @apply flex flex-col gap-4;
+    .about-card {
+        @apply flex items-start gap-4 p-5 rounded-2xl border border-blue-900/50
+        bg-blue-950/30;
+        div {
+            @apply pr-8;
+        }
+        .about-card-icon {
+            @apply flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-900/60 text-3xl text-blue-400;
+        }
+        .about-card-title {
+            @apply text-blue-50 font-bold;
+        }
+        .about-card-content {
+            @apply text-blue-200;
+        }
+    }         
+}

@@ -1,17 +1,53 @@
 .nav-bar {
-    @apply flex flex-row md:justify-end;
+    @apply relative z-50 flex flex-row items-start md:justify-end;
 
     .nav-hamburger {
-        @apply visible md:invisible;
+        @apply relative z-50 flex h-12 w-12 cursor-pointer items-center justify-center md:hidden;
+
+        .icon-close {
+            @apply hidden;
+        }
     }
+
     .nav-menu {
-        @apply invisible flex flex-row gap-6 md:visible;
+        @apply hidden flex-col gap-0 md:flex md:flex-row md:gap-6;
+
+        &.active {
+            @apply max-md:fixed max-md:inset-0 max-md:z-40 max-md:flex max-md:h-screen max-md:w-full max-md:items-center max-md:justify-center max-md:bg-portfolio-dark/95;
+        }
+
         li {
-            @apply py-2 px-4;
+            @apply px-4 py-2 text-center max-md:w-64 max-md:border-b max-md:border-blue-100;
+        }
+
+        li:last-child {
+            @apply max-md:border-b-0;
         }
         li:hover {
-            @apply bg-blue-500 text-blue-50 rounded-full;
+            @apply rounded-xl bg-blue-200 text-blue-900;
         }
-        
+        li.active {
+            @apply rounded-xl bg-blue-500 text-blue-50;
+        }
+    }
+
+    .nav-overlay {
+        @apply hidden;
+    }
+
+    .nav-overlay.active {
+        @apply fixed inset-0 z-30 bg-black/60 md:hidden;
+    }
+
+    &:has(.nav-menu.active) {
+        .nav-hamburger {
+            .icon-menu {
+                @apply hidden;
+            }
+
+            .icon-close {
+                @apply block;
+            }
+        }
     }
 }

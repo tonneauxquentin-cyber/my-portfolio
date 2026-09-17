@@ -1,17 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my-portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,close,school,code,target" />
   </head>
   <body>
     <header>
-      <h1 class="header-title">Quentin Tonneaux</h1>
-      <nav class="nav-bar"> 
+      <h1 class="header-title">Quentin <span>Tonneaux</span></h1>
+      <nav class="nav-bar">
+        <button class="nav-hamburger">
+          <span class="material-symbols-outlined icon-menu">menu</span>
+          <span class="material-symbols-outlined icon-close">close</span>
+        </button>
+        <div class="nav-overlay"></div>
         <ul class="nav-menu">
           <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#a-propos">À propos</a></li>
           <li><a href="#competences">Compétences</a></li>
           <li><a href="#projets">Projets</a></li>
           <li><a href="#parcours">Parcours</a></li>
@@ -20,7 +26,89 @@
       </nav>
     </header>
     <main>
-
+      <section id="accueil" class="hero">
+        <div class="hero-overlay">
+          <div class="hero-content-overlay"></div>
+            <div class="hero-content">
+              <h2 class="hero-title">Web Developer</h2>
+              <h3 class="hero-subtitle">Profil full-stack orienté backend</h3>
+              <p class="hero-paragraphe">Développement web avec une approche complémentaire en Web Design / UI/UX.</p>
+              <div class="hero-btn-container">
+                <a href="#projets" class="btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn-secondary">Me contacter</a>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section id="a-propos" class="about-section">
+        <div class="about-content">
+          <div class="section-label">
+            <span>À PROPOS</span>
+            <span class="section-line"></span>
+          </div>
+          <h2 class="about-title">Derrière le <span>code</span></h2>
+          <p class="about-intro">
+            Je suis Quentin Tonneaux, étudiant en deuxième année
+            du BES Web Developer. Je développe progressivement
+            un profil full-stack, avec une préférence particulière
+            pour le backend, la logique applicative et la structuration
+            des projets.
+          </p>
+          <div class="about-cards">
+            <article class="about-card">
+              <span class="material-symbols-outlined about-card-icon">school</span>
+              <div>
+                <h3 class="about-card-title">Mon profil</h3>
+                <p class="about-card-content">
+                Une formation orientée développement web,
+                complétée par des compétences en UI/UX,
+                intégration et conception d’interfaces.
+                </p>
+              </div>
+            </article>
+            <article class="about-card">
+              <span class="material-symbols-outlined about-card-icon">code</span>
+              <div>
+                <h3 class="about-card-title">Ma manière de travailler</h3>
+                <p class="about-card-content">
+                J’aime comprendre comment les choses fonctionnent,
+                structurer mon code et avancer étape par étape pour construire des solutions propres et maintenables.
+                </p>
+              </div>
+            </article>
+            <article class="about-card">
+              <span class="material-symbols-outlined about-card-icon">target</span>
+              <div>
+                <h3 class="about-card-title">Mon objectif</h3>
+                <p class="about-card-content">
+                Continuer à progresser à travers des projets concrets,
+                une expérience en entreprise et, à terme,
+                proposer mes compétences comme développeur full-stack.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-window">
+            <div class="code-window-header">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img
+              src="/images/developer-code.png"
+              alt="Extrait de code JavaScript présentant mon profil">
+          </div>
+        </div>
+      </section>
+      <section id="competences" class="bg-portfolio-section">
+        <h2>Mes compétences</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad eaque aliquid perspiciatis quidem cumque, quos exercitationem rem sed et, vitae quae accusamus necessitatibus? Blanditiis explicabo pariatur asperiores possimus dicta.</p>
+      </section>
+      <section id="projets"></section>
+      <section id="parcours"></section>
+      <section id="contact"></section>
     </main>
     <footer>
 

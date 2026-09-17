@@ -1,0 +1,36 @@
+.about-section {
+    @apply bg-portfolio-dark grid grid-cols-1 items-center gap-12 px-16 py-24 md:grid-cols-2;
+}
+
+.about-content {
+    @apply flex flex-col gap-4;
+    .about-title {
+        @apply text-blue-50 text-3xl font-bold md:text-7xl;
+        span {
+            @apply text-blue-400;
+        }
+    }
+    .about-intro {
+        @apply text-blue-50 md:text-lg max-w-2xl;
+    }
+}
+
+.about-visual {
+    @apply flex items-center justify-center;
+}
+
+.code-window {
+    @apply w-full max-w-2xl overflow-hidden rounded-2xl border border-blue-900/50 bg-slate-950 shadow-2xl;
+}
+
+.code-window-header {
+    @apply flex gap-2 border-b border-slate-800 bg-slate-900 px-4 py-3;
+}
+
+.code-window-header span {
+    @apply h-3 w-3 rounded-full bg-slate-600;
+}
+
+.code-window img {
+    @apply block h-auto w-full;
+}

@@ -1,0 +1,7 @@
+.section-label {
+    @apply flex items-center gap-4 text-sm font-semibold tracking-widest text-blue-400;
+}
+
+.section-line {
+    @apply h-px w-16 bg-blue-400;
+}
