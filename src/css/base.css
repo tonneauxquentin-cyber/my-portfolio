@@ -21,8 +21,21 @@
         @apply flex flex-col;
     }
     footer {
-        @apply container mx-auto flex gap-4 text-gray-400 justify-start text-xs;
+    @apply flex flex-col md:flex-row justify-between items-center gap-4
+           p-4 text-blue-50 border-t border-blue-200/60 bg-portfolio-dark;
+    .footer-title {
+        @apply text-2xl;
+        span {
+            @apply text-blue-500;
+        }
     }
+    .footer-socials {
+        @apply flex gap-4;
+    }
+    .footer-copyright {
+        @apply text-sm text-blue-50/70;
+    }
+}
 }
 
 

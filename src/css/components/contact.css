@@ -1,0 +1,68 @@
+.contact {
+    @apply bg-portfolio-dark;
+    .contact-intro {
+        @apply max-w-2xl mt-4 mb-12 text-portfolio-light text-left;
+    }
+    .contact-grid {
+        @apply grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16;
+    }
+}
+ 
+.contact-form {
+    @apply flex flex-col gap-5;
+    .form-group {
+        @apply flex flex-col gap-2;
+        label {
+            @apply text-sm text-portfolio-light opacity-80;
+        }
+        input,
+        textarea {
+            @apply bg-portfolio-section border border-portfolio-blue/30 rounded-md px-4 py-2
+                   text-white placeholder:text-portfolio-light/40
+                   focus:outline-none focus:border-portfolio-blue transition-colors duration-200 ease-in-out;
+        }
+        textarea {
+            @apply resize-none;
+        }
+    }
+}
+ 
+.contact-submit {
+    @apply self-start;
+}
+ 
+.contact-feedback {
+    @apply text-sm min-h-[1.25rem];
+    &.is-success {
+        @apply text-portfolio-blue;
+    }
+    &.is-error {
+        @apply text-red-400;
+    }
+}
+ 
+.contact-info {
+    .contact-info-intro {
+        @apply text-portfolio-light mb-3;
+    }
+    .contact-email {
+        @apply inline-block text-lg font-semibold text-portfolio-blue mb-8
+               hover:underline transition-colors duration-200 ease-in-out;
+    }
+}
+ 
+/* Réutilisable dans n'importe quelle section (Contact, Footer...) */
+.contact-socials {
+    @apply flex gap-4;
+}
+ 
+.contact-social {
+    @apply flex items-center justify-center w-11 h-11 rounded-full border border-portfolio-blue
+           text-portfolio-blue transition-colors duration-200 ease-in-out;
+    &:hover {
+        @apply bg-portfolio-blue text-white;
+    }
+    svg {
+        @apply w-5 h-5;
+    }
+}

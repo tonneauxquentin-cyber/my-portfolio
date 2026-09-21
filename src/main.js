@@ -41,3 +41,44 @@ ParcoursCards.forEach((card) => {
         this.textContent = isOpen ? "Réduire" : "Voir le détail";
     });
 });
+
+// JS du form
+const ContactForm = document.querySelector("#contact-form");
+const ContactFeedback = document.querySelector("#contact-feedback");
+ 
+if (ContactForm) {
+    ContactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+ 
+        const submitButton = ContactForm.querySelector(".contact-submit");
+        const formData = new FormData(ContactForm);
+ 
+        submitButton.disabled = true;
+        ContactFeedback.textContent = "Envoi en cours...";
+        ContactFeedback.className = "contact-feedback";
+ 
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: formData,
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    ContactFeedback.textContent = "Message envoyé, merci !";
+                    ContactFeedback.classList.add("is-success");
+                    ContactForm.reset();
+                } else {
+                    ContactFeedback.textContent = "Une erreur est survenue, réessayez.";
+                    ContactFeedback.classList.add("is-error");
+                }
+            })
+            .catch(() => {
+                ContactFeedback.textContent = "Une erreur est survenue, réessayez.";
+                ContactFeedback.classList.add("is-error");
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+            });
+    });
+}
