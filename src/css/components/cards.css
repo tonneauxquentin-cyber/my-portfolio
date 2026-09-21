@@ -17,3 +17,30 @@
         }
     }         
 }
+
+.skills-card {
+    @apply flex flex-col gap-4 rounded-2xl border border-portfolio-blue/30 bg-portfolio-dark text-portfolio-light p-6;
+
+    &.skills-card-frontend { --skill-accent: #2563EB; }
+    &.skills-card-backend  { --skill-accent: #6366F1; }
+    &.skills-card-database { --skill-accent: #06B6D4; }
+    &.skills-card-design   { --skill-accent: #8B5CF6; }
+
+    .skills-card-title-container {
+        @apply flex flex-row gap-4;
+        .skills-card-icon {
+            color: var(--skill-accent);
+            @apply flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-900/60 text-3xl;
+        }
+        div {
+            @apply flex flex-col gap-4;
+            .skills-card-title {
+                @apply text-blue-50 font-bold;
+            }
+            .skills-card-line {
+                @apply h-px w-8;
+                background-color: var(--skill-accent);
+            }
+        }
+    }   
+}

@@ -4,15 +4,6 @@
 
 .about-content {
     @apply flex flex-col gap-4;
-    .about-title {
-        @apply text-blue-50 text-3xl font-bold md:text-7xl;
-        span {
-            @apply text-blue-400;
-        }
-    }
-    .about-intro {
-        @apply text-blue-50 md:text-lg max-w-2xl;
-    }
 }
 
 .about-visual {

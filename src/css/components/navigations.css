@@ -17,17 +17,17 @@
         }
 
         li {
-            @apply px-4 py-2 text-center max-md:w-64 max-md:border-b max-md:border-blue-100;
+            @apply px-4 py-2 text-center max-md:w-64 max-md:border-b max-md:border-portfolio-light;
         }
 
         li:last-child {
             @apply max-md:border-b-0;
         }
         li:hover {
-            @apply rounded-xl bg-blue-200 text-blue-900;
+            @apply rounded-xl bg-portfolio-light text-portfolio-dark;
         }
         li.active {
-            @apply rounded-xl bg-blue-500 text-blue-50;
+            @apply rounded-xl bg-portfolio-blue text-portfolio-light;
         }
     }
 

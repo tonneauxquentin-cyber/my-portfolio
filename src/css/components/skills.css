@@ -1,0 +1,28 @@
+.skills {
+    @apply bg-portfolio-section;
+    .skills-container {
+        @apply flex flex-col gap-4;
+    }
+    .skills-grid {
+        @apply mx-auto grid w-full max-w-5xl gap-4 md:grid-cols-2;
+        .skills-list {
+            @apply list-disc pl-10 pr-10;
+            color: var(--skill-accent);
+            span {
+                @apply text-portfolio-light;
+            }
+            .skill-item {
+                @apply flex items-center justify-between gap-4;
+                .skill-level {
+                    @apply flex gap-1 shrink-0;
+                    .level-dot {
+                        @apply h-2 w-2 rounded-full bg-portfolio-section;
+                    }
+                    .level-dot.active {
+                        background-color: var(--skill-accent);
+                    }
+                }
+            }  
+        }
+    }
+}
