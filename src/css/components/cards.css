@@ -44,3 +44,6 @@
         }
     }   
 }
+.parcours-card {
+    @apply bg-portfolio-dark rounded-lg p-6 md:p-8;
+}

@@ -1,0 +1,62 @@
+.parcours {
+    @apply bg-portfolio-section;
+    .parcours-intro {
+        @apply max-w-2xl mt-4 mb-12 text-portfolio-light text-left;
+    }
+    .parcours-timeline {
+        @apply relative list-none m-0 p-0;
+        .parcours-step {
+            @apply relative pl-12 mb-10 last:mb-0;
+            .parcours-marker {
+                @apply absolute top-1.5 left-0 w-[1.1rem] h-[1.1rem] rounded-full bg-portfolio-blue;
+                box-shadow: 0 0 0 4px var(--color-portfolio-section);
+            }
+        }
+    }
+    .parcours-timeline::before {
+        content: "";
+        @apply absolute top-2 bottom-2 left-2 w-0.5 bg-portfolio-blue opacity-35;
+    }
+}
+.parcours-period {
+    @apply inline-block text-sm font-semibold text-portfolio-blue mb-2;
+}
+.parcours-title {
+    @apply text-white text-lg font-semibold mb-1;
+}
+.parcours-school {
+    @apply text-portfolio-light opacity-75 text-sm mb-4;
+}
+.parcours-toggle {
+    @apply px-4 py-1.5;
+}
+.parcours-details {
+    @apply grid grid-rows-[0fr] mt-4 transition-[grid-template-rows] duration-300 ease-in-out;
+    .parcours-details-inner {
+        @apply overflow-hidden;
+        .parcours-list {
+            @apply list-none m-0 p-0;
+            li {
+                @apply flex gap-2 text-portfolio-light text-sm py-1;
+                span {
+                    @apply text-portfolio-blue;
+                }
+            }
+        }
+        .parcours-sublabel {
+            @apply block text-xs uppercase tracking-wide text-portfolio-blue opacity-80 mt-4 mb-1;
+        }
+    }
+}
+.parcours-card.is-open .parcours-details {
+    @apply grid-rows-[1fr];
+}
+.parcours-objectif {
+    @apply bg-portfolio-dark border-l-[3px] border-portfolio-blue rounded-lg p-8 md:p-10 mt-12;
+    .parcours-objectif-title {
+        @apply text-white text-lg font-semibold mb-2;
+    }
+    p {
+        @apply text-portfolio-light max-w-xl;
+    }
+}
