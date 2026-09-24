@@ -7,7 +7,6 @@
         @apply grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16;
     }
 }
- 
 .contact-form {
     @apply flex flex-col gap-5;
     .form-group {
@@ -26,11 +25,9 @@
         }
     }
 }
- 
 .contact-submit {
     @apply self-start;
 }
- 
 .contact-feedback {
     @apply text-sm min-h-[1.25rem];
     &.is-success {
@@ -40,7 +37,6 @@
         @apply text-red-400;
     }
 }
- 
 .contact-info {
     .contact-info-intro {
         @apply text-portfolio-light mb-3;
@@ -50,12 +46,9 @@
                hover:underline transition-colors duration-200 ease-in-out;
     }
 }
- 
-/* Réutilisable dans n'importe quelle section (Contact, Footer...) */
 .contact-socials {
     @apply flex gap-4;
-}
- 
+} 
 .contact-social {
     @apply flex items-center justify-center w-11 h-11 rounded-full border border-portfolio-blue
            text-portfolio-blue transition-colors duration-200 ease-in-out;

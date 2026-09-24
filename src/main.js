@@ -82,3 +82,38 @@ if (ContactForm) {
             });
     });
 }
+// JS projets
+const ProjetsPanels = document.querySelectorAll(".projets-panel");
+const ProjetsTriggers = document.querySelectorAll("[data-projets-trigger]");
+const ProjetsOtherLabel = { dev: "Design", design: "Dev" };
+ 
+function updateProjetsLabel(trigger) {
+    const panel = trigger.closest(".projets-panel");
+    const target = trigger.dataset.panelTarget;
+ 
+    if (panel.classList.contains("is-expanded")) {
+        trigger.textContent = `Voir les projets ${ProjetsOtherLabel[target]}`;
+    } else {
+        trigger.textContent = "Voir les projets";
+    }
+}
+ 
+ProjetsTriggers.forEach((trigger) => {
+    updateProjetsLabel(trigger);
+ 
+    trigger.addEventListener("click", function () {
+        const panel = this.closest(".projets-panel");
+        const isExpanded = panel.classList.contains("is-expanded");
+ 
+        const targetPanel = isExpanded
+            ? [...ProjetsPanels].find((p) => p !== panel)
+            : panel;
+ 
+        ProjetsPanels.forEach((p) => {
+            p.classList.remove("is-expanded", "is-collapsed");
+            p.classList.add(p === targetPanel ? "is-expanded" : "is-collapsed");
+        });
+ 
+        ProjetsTriggers.forEach((t) => updateProjetsLabel(t));
+    });
+});

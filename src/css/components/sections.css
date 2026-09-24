@@ -1,13 +1,13 @@
 .section {
     @apply items-center gap-12 px-16 py-24;
     .section-title {
-        @apply text-blue-50 text-3xl font-bold md:text-7xl;
+        @apply text-portfolio-light text-3xl font-bold md:text-7xl;
         span {
             @apply text-blue-400;
         }
     }
     .section-intro {
-        @apply text-blue-50 md:text-lg max-w-2xl;
+        @apply text-portfolio-light md:text-lg max-w-2xl;
     }
 }
 .section-label {

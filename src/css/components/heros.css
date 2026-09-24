@@ -4,7 +4,7 @@
         @apply min-h-screen w-full flex flex-col justify-center;
         background: linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.65) 0%,
             rgba(0, 0, 0, 0.60) 45%,
             rgba(0, 0, 0, 0.50) 75%,
             rgba(0, 0, 0, 0.40) 100%
