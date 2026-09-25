@@ -1,5 +1,5 @@
 import './css/style.css';
-//JS de la nav mobile
+//JS de la nav
 const NavContent = document.querySelector(".nav-menu");
 const NavTrigger = document.querySelector(".nav-hamburger");
 const NavOverlay = document.querySelector(".nav-overlay");
@@ -117,3 +117,22 @@ ProjetsTriggers.forEach((trigger) => {
         ProjetsTriggers.forEach((t) => updateProjetsLabel(t));
     });
 });
+
+// JS des icônes flottantes
+const FloatingSocials = document.querySelector("#floating-socials");
+const ContactSection = document.querySelector("#contact");
+ 
+if (FloatingSocials && ContactSection) {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                FloatingSocials.classList.toggle("is-hidden", entry.isIntersecting);
+            });
+        },
+        {
+            rootMargin: "0px 0px -20% 0px",
+        }
+    );
+ 
+    observer.observe(ContactSection);
+}
