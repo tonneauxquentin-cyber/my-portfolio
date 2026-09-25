@@ -4,91 +4,85 @@
         @apply max-w-2xl mt-4 mb-12 text-portfolio-light text-left;
     }
 }
- 
 .projets-split {
     @apply flex flex-col md:flex-row gap-3;
 }
- 
 .projets-panel {
     @apply relative flex flex-col basis-1/2 overflow-hidden bg-portfolio-section rounded-lg
            transition-[flex-basis,flex-grow] duration-500 ease-in-out;
- 
     &.is-expanded {
         @apply flex-[1_1_100%];
     }
- 
     &.is-collapsed {
         @apply flex-[0_0_4rem];
     }
- 
     .projets-panel-heading {
         @apply w-full shrink-0 flex items-center justify-center py-4 px-4 bg-portfolio-dark/40;
     }
- 
     .projets-panel-label {
         @apply text-lg font-semibold text-portfolio-light tracking-wide whitespace-nowrap;
     }
- 
     &.is-collapsed .projets-panel-heading {
         @apply md:h-full md:flex-col md:justify-center;
     }
- 
     &.is-collapsed .projets-panel-label {
         @apply md:[writing-mode:vertical-rl] md:rotate-180;
     }
- 
     .projets-panel-body {
         @apply p-6 md:p-8 overflow-y-auto;
     }
- 
     .projets-panel-teaser {
         @apply flex flex-col items-start gap-6 py-10 md:py-16;
     }
- 
     .projets-panel-intro {
         @apply text-portfolio-light max-w-md;
     }
- 
     .projets-panel-list {
         @apply hidden;
     }
- 
     &.is-expanded .projets-panel-teaser {
         @apply hidden;
     }
- 
     &.is-expanded .projets-panel-list {
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
     }
- 
     &.is-expanded .projets-panel-list--design {
         @apply lg:grid-cols-2;
     }
- 
     &.is-collapsed .projets-panel-body {
         @apply hidden;
     }
 }
- 
 .projets-panel-cta {
     @apply cursor-pointer mt-4 mb-4;
 }
- 
 .projet-card {
     @apply relative flex flex-col gap-3 bg-portfolio-dark rounded-lg p-5;
- 
     &.projet-card--featured {
         @apply md:col-span-2 p-8;
         .projet-title {
             @apply text-xl;
         }
     }
- 
+    .projet-image {
+        @apply aspect-video object-cover rounded-md -mt-5 -mx-5 mb-1 w-[calc(100%+2.5rem)];
+    }
+    &.projet-card--featured .projet-image {
+        @apply aspect-[16/10];
+    }
+    .projet-embed {
+        @apply hidden md:block relative aspect-[4/3] rounded-md overflow-hidden -mt-5 -mx-5 mb-1 w-[calc(100%+2.5rem)];
+        iframe {
+            @apply absolute inset-0 w-full h-full border-0;
+        }
+    }
+    .projet-link--mobile-proto {
+        @apply block md:hidden mb-2;
+    }
     .projet-badge {
         @apply inline-block self-start text-xs font-semibold uppercase tracking-wide rounded-full px-3 py-1;
- 
         &.projet-badge--online {
-            @apply bg-portfolio-blue text-portfolio-light;
+            @apply bg-portfolio-blue text-white;
         }
         &.projet-badge--code {
             @apply border border-portfolio-blue text-portfolio-blue;
@@ -100,31 +94,25 @@
             @apply bg-portfolio-light text-portfolio-dark;
         }
     }
- 
     .projet-title {
         @apply text-portfolio-light font-semibold text-base;
     }
- 
     .projet-description {
         @apply text-portfolio-light text-sm opacity-80;
     }
- 
     .projet-tags {
         @apply flex flex-wrap gap-2;
         span {
             @apply text-xs text-portfolio-blue bg-portfolio-blue/10 rounded-full px-2 py-0.5;
         }
     }
- 
     .projet-link {
         @apply text-sm font-semibold text-portfolio-blue
                hover:underline transition-colors duration-200 ease-in-out;
     }
- 
     > .projet-link {
         @apply mt-auto;
     }
- 
     .projet-links {
         @apply mt-auto flex gap-4;
     }

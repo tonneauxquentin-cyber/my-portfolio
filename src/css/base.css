@@ -5,6 +5,9 @@
     --color-portfolio-light: #DBEAFE;
 }
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         @apply flex flex-col justify-between bg-portfolio-dark;
     }
